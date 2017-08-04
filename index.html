@@ -1,50 +1,72 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Tanya</title>
-    </head>
-  <body>
+<html>
+<head>
+  <title>Welcome to Grandmother Trivia</title>
+</head>
+<body>
+  <h1>Welcome to Grandmother Trivia</h1>
+    <p>Meet Grandmother. She's beautiful, fun, smart, and facetious.
+      She enjoys long walks in the park and playing at the beach.
+      Her favorite place in the world is Hawaii because she feels she can really let her hair down.
+      She also likes France. </p>
 
-<h1>Welcome to Super Rad</h1>
-  <p>There are a few things to share with you today. In fact, these are a few of my favorie things. Let's begin with a litle background
-  about super rad experiences I've had (and some other stuff).</p>
+      <p>As a lover of trivia, Grandmother designed a little game for you to get to know her.
+        She wants to share all the places she's traveled as well as her absolute favorite things with you.
+        One could only hope to be so lucky. Look at you, you lucky duck!</p>
 
-<h3>Experience</h3>
+        <p>Grandmother currently resides in Oregon.</p>
+<img src= "https://www.facebook.com/photo.php?fbid=10205633005851700&set=pb.1450440064.-2207520000.1501814336.&type=3&theater" />
+<p>These are a few of her favorite things:</p>
   <ul>
-    <li>I'm double jointed. When I was a kid, I used to jump rope with my arms. This means I would pop my arm out of its socket each time I pulled
-    the "jump rope" (my arms) over my head.<b> Circus points.</b></li>
-    <li>I have two cats which basically makes me an experienced cat whisperer. I whisper to them and nothing happens... but I can tell they understand me.</li>
-    <li>In 2015, I co-faciliated a yoga teacher training in prison. It was pretty intense now that I reflect on it. We helped 12 adults in custody (inmates)
-    become cerfitied yoga teachers for their peers.</li>
-    <li>I'm not sure if I'm doing this assingment correctly. But that means I'm gaining experience trying to figure stuff out. So that's pretty great.</li>
+    <li>Jason</li>
+    <li>Her Dress</li>
+    <li>The Beach</li>
+    <li>Pillow Fights</li>
  </ul>
+ <p>She prefers them in this order:</p>
+ <ol>
+   <li>Her Dress</li>
+   <li>Jason</li>
+   <li>Pillow Fights (preferably with Jason)</li>
+   <li>The Beach</li>
+   <p>To purcahse prints of Grandmother's Grand Adventure, click on the link the follows:</p>
+  <a href="www.grandmother/store">Grandmother's Store<a/>
 
- <p>Well, hey there!</p>
+    <script type "text/javascript">
+      var userName = prompt("Oh, hi. Wanna learn about Grandmother? Tell me your name.", "");
+      alert("Well hey there " +userName + "! Welcome to Grandmother Trivia!");
+      console.log("userName is " +userName)
 
-<h3>Education</h3>
-  <ul>
-    <li>Portland State University: Bachelor's of Community Health.</li>
-    <li>International Association of Yoga Therapists: Certified Yoga Therapist.</li>
-    <li>Alchemy Code Lab (!): Coder in incubation.</li>
-  </ul>
+      var favoriteThing = prompt("First things first. Is Grandmother's very favorite thing her green dress", "yes/no");
+      if (favoriteThing == "yes" || favoriteThing == "Yes"){
+      alert("Gold star for you " +userName + "! That's correct!");
+      console.log("user responded yes to question one")
+    }
+    else {
+      alert ("Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!");
+      console.log("user anwsners no to question one")
+    }
+      var crush = prompt("Is Grandmother's #1 celeberity crush Jason Hardy?", "yes/no");
+      if (crush == "yes" || crush == "Yes")
+      {
+      alert("Gold Start for you " +userName + "! Jason is a celeberity in Grandmother's eyes. *Aww*");
+      console.log("user responded yes to question two.")
+    }
 
-<h3>Goals</h3>
-<ol>
-  <li>Graduate from Alchemy Code Lab</li>
-  <li>Become a mother</li>
-  <li>Live past 85</li>
-  <li>Practice yoga on the the daily</li>
-  <li>Be super rad</li>
-</ol>
+      else {alert ("You're totally wrong right now.");
+      console.log("user responded no to questions two.")
+    }
+      var Mona = prompt("Has Grandmother touched the Mona Lisa?", "yes/no");
+      if (Mona == "yes" || Mona == "Yes")
+    {
+      alert("Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.");
+      console.log("user responded no to question three.")
+    }
 
-<h4>Interested in becoming Super Rad?</h4>
-  <p>Check out this formula: Cool<sub>3</sub> + Awesome<sup>2</sup></p>
-  <p>Now stop reading this and go practice being super rad.</p>
+      else {alert ("You would think that. Classic " +userName + ". Smarty Pants.");
+      console.log("user responded no to question three.")
+    }
 
-  <script type "text/javascript">
-    var userName = prompt("You're looking super rad today. Tell me your name.", "");
-    alert("Well hey there " +userName + "! Your wife is hot!");
-  </script>
+</script>
 
-  </body>
-</html>
+<body>
