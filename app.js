@@ -10,10 +10,11 @@
     alert("Gold star for you " +userName + "! That's correct!");
     console.log("user responded yes to question one")
   }
-  else {
-    alert ("Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!");
-    console.log("user anwsners no to question one")
+  else if (favoriteThingLowerCase == "no" || favoriteThingLowerCase == "n") {alert ("Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!");
+  console.log("user anwsners no to question one")}
+  else {alert ("That's not a real answer. I asked for yes or no!");
   }
+
   var crush = prompt("Is Grandmother's #1 celebrity crush Jason Hardy?", "yes/no");
   var crushLowerCase = crush.toLowerCase()
   if (crushLowerCase == "yes" || crushLowerCase == "y")
