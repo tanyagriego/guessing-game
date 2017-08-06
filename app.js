@@ -64,7 +64,7 @@
     {
       alert("You guessed right! Grandmother will be 87 forever, she found that Tuck Everlasting juice and went wild.");
       correct = correct + 1;
-      console.log("user responded correctly to question four.")
+      console.log("user responded correctly to question three.")
     }
     else if (age >= 88)
     {
