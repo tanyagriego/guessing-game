@@ -56,7 +56,7 @@
     {
       message += "<p class=\"incorrect\">You're totally wrong right now.</p>";
       incorrect = incorrect +1;
-    console.log("user responded no to questions two.")
+      console.log("user responded no to questions two.")
     }
     else {alert ("Yes or no answers only, please.");
     }
@@ -72,15 +72,15 @@
     message = "<p>" + trickQuestion +"</p>"
     if (monaLowerCase == "yes" || monaLowerCase == "y")
     {
-    message += "<p class=\"incorrect\">Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.</p>";
-    incorrect = incorrect +1;
-    console.log("user responded no to question three.")
+      message += "<p class=\"incorrect\">Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.</p>";
+      incorrect = incorrect +1;
+      console.log("user responded no to question three.")
     }
     else if (monaLowerCase == "no" || monaLowerCase == "n")
     {
-    message += "<p class=\"correct\">You would think that. Classic " +userName + ". You're right, Smarty Pants.</p>";
-    correct = correct + 1;
-    console.log("user responded no to question three.")
+      message += "<p class=\"correct\">You would think that. Classic " +userName + ". You're right, Smarty Pants.</p>";
+      correct = correct + 1;
+      console.log("user responded no to question three.")
     }
     else {alert ("Yes or no answers only, please.")
     }
@@ -107,8 +107,8 @@
     else if (age <=86) {message = "Grandmother thanks you for your kindness. Your guess is too low."
     incorrect = incorrect + 1;
   }
-    console.log("user responded incorrectly to question four")
-    document.getElementById("TriviaResponses").innerHTML += "<br>"+message
+      console.log("user responded incorrectly to question four")
+      document.getElementById("TriviaResponses").innerHTML += "<br>"+message
   }
 //while loop to repeat a question (as in a wrong answer to Grandmother's age)
 

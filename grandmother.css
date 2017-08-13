@@ -1,7 +1,45 @@
-h1  {
-  background-color: turquoise;
-}
 p, ol, ul {
-  font-family: arial
+  font-family: arial;
+  text-align: justify;
 
 }
+
+h1, h2, h4 {
+  font-family: arial;
+  color: rgb(72, 217, 185);
+}
+
+h1 {
+  text-align: center;
+}
+
+
+body {
+  border-style: solid;
+  padding: 20px;
+  /*border: black;*/
+  /*border-width: 1px 4px 12px 4px;*/
+  border-color: black;
+}
+
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
+/*body {
+  background-color: black;
+}*/
+
+input {
+  text-align: center;
+}
+
+img.align-center {
+  display: block;
+  margin: 0px auto;}
+  img.medium {
+    width: 350px;
+    height: 450px;
+  }
