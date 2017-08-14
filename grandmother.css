@@ -23,7 +23,7 @@ body {
   border-color: black;
   font-size: 18px;
   font-family: arial;
-  text-align: justify; 
+  text-align: justify;
 }
 
 .correct {
@@ -38,6 +38,10 @@ body {
 
 input {
   text-align: center;
+  color: purple;
+  width: 170px;
+  height: 50px;
+  border-color: rgb(72, 217, 185);
 }
 
 img.align-center {
