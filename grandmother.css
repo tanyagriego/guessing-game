@@ -1,6 +1,7 @@
 p, ol, ul {
   font-family: arial;
   text-align: justify;
+  font-size: 18px
 
 }
 
@@ -20,10 +21,13 @@ body {
   /*border: black;*/
   /*border-width: 1px 4px 12px 4px;*/
   border-color: black;
+  font-size: 18px;
+  font-family: arial;
+  text-align: justify; 
 }
 
 .correct {
-  color: green;
+  color: lightgreen;
 }
 .incorrect {
   color: red;

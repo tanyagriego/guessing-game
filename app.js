@@ -24,12 +24,14 @@
     if (favoriteThingLowerCase == "yes" || favoriteThingLowerCase == "y")
     {
       message += "<p class=\"correct\">Gold star for you, "  +userName + "! Green dress is correct!</p>";
+      message += "<img src='http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />";
       correct = correct + 1;
       console.log("user responded yes to question one")
     }
     else if (favoriteThingLowerCase == "no" || favoriteThingLowerCase == "n")
     {
       message += "<p class=\"incorrect\">Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!</p>";
+      message += "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />";
       incorrect = incorrect +1;
       console.log("user anwsners no to question one")
     }
@@ -48,13 +50,15 @@
     message = "<p>" + jason +"</p>";
     if (crushLowerCase == "yes" || crushLowerCase == "y")
     {
-      message+="<p class=\"correct\">Gold Star for you " +userName + "! Jason is a celebrity in Grandmother's eyes. *Aww*</p>";
+      message +="<p class=\"correct\">Gold Star for you " +userName + "! Jason is a celebrity in Grandmother's eyes. *Aww*</p>";
+      message += "<img src= 'http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />";
       correct = correct +1;
       console.log("user responded yes to question two.")
     }
     else if (crushLowerCase == "no" || crushLowerCase == "n")
     {
       message += "<p class=\"incorrect\">You're totally wrong right now.</p>";
+      message += "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />";
       incorrect = incorrect +1;
       console.log("user responded no to questions two.")
     }
@@ -73,12 +77,14 @@
     if (monaLowerCase == "yes" || monaLowerCase == "y")
     {
       message += "<p class=\"incorrect\">Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.</p>";
+      message += "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />";
       incorrect = incorrect +1;
       console.log("user responded no to question three.")
     }
     else if (monaLowerCase == "no" || monaLowerCase == "n")
     {
       message += "<p class=\"correct\">You would think that. Classic " +userName + ". You're right, Smarty Pants.</p>";
+      message += "<img src= 'http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />";
       correct = correct + 1;
       console.log("user responded no to question three.")
     }
@@ -95,16 +101,20 @@
     if (age == "87")
     {
       message += "<p class = \"correct\">You guessed right! Grandmother will be 87 forever, she found that Tuck Everlasting juice and went wild.</p>";
+      message += "<img src= 'http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />";
       correct = correct + 1;
       console.log("user responded correctly to question three.")
     }
     else if (age >= 88)
     {
       message += "<p class =\"incorrect\">Don't be rude. She's not dead. Your guess is too high! Try again.</p>"
+      message += "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />";
       incorrect = incorrect + 1;
       console.log ("user responded incorrectly to question four")
   }
-    else if (age <=86) {message = "Grandmother thanks you for your kindness. Your guess is too low."
+    else if (age <=86) {
+    message += "Grandmother thanks you for your kindness. Your guess is too low."
+    message += "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />";
     incorrect = incorrect + 1;
   }
       console.log("user responded incorrectly to question four")
