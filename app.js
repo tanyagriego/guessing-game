@@ -3,95 +3,34 @@
     var message=""
     var userName=""
 
-    function triviaGame() {
-      name(); Q1(); Q2(); Q3(); Q4(); finalScore();
-    }
+    //name//
+      function name (){
+        userName = prompt("Oh, hi. Wanna learn about Grandmother? Tell me your name.", "");
+        message += "Well hey there " +userName + "! Welcome to Grandmother Trivia!";
+        console.log("userName is " +userName)
+        document.getElementById("TriviaResponses").innerHTML = "<br>"+message
+      }
 
-//name//
-  function name (){
-    userName = prompt("Oh, hi. Wanna learn about Grandmother? Tell me your name.", "");
-    message += "Well hey there " +userName + "! Welcome to Grandmother Trivia!";
-    console.log("userName is " +userName)
-    document.getElementById("TriviaResponses").innerHTML = "<br>"+message
-  }
+    function askQuestion (question, correctMessage, incorrectMessage) {
+      var usersAnswer = prompt(question, "yes/no").toLowerCase();
 
-//favoriteThing//
-  function Q1 (){
-    var greenDress = "First things first. Is Grandmother's very favorite thing her green dress?"
-    var favoriteThing = prompt(greenDress, "yes/no");
-    var favoriteThingLowerCase = favoriteThing.toLowerCase()
-    message = "<p>" + greenDress +"</p>";
-    if (favoriteThingLowerCase == "yes" || favoriteThingLowerCase == "y")
-    {
-      message += "<p class=\"correct\">Gold star for you, "  +userName + "! Green dress is correct!</p>";
-      message = "<img src='http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />"+ message;
-      correct = correct + 1;
-      console.log("user responded yes to question one")
-    }
-    else if (favoriteThingLowerCase == "no" || favoriteThingLowerCase == "n")
-    {
-      message += "<p class=\"incorrect\">Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!</p>";
-      message = "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />"+ message;
-      incorrect = incorrect +1;
-      console.log("user anwsners no to question one")
-    }
-    else
-    {
-      message+="Yes or no answers only, please.";
-    }
-    document.getElementById("TriviaResponses").innerHTML = "<br>"+message;
-  }
+      message += "<p>" + question + "<p>"
 
-//crush//
-  function Q2 (){
-    var jason = "Is Grandmother's #1 celebrity crush Jason Hardy?"
-    var crush = prompt(jason, "yes/no");
-    var crushLowerCase = crush.toLowerCase()
-    message = "<p>" + jason +"</p>";
-    if (crushLowerCase == "yes" || crushLowerCase == "y")
-    {
-      message +="<p class=\"correct\">Gold Star for you " +userName + "! Jason is a celebrity in Grandmother's eyes. *Aww*</p>";
-      message = "<img src= 'http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />"+message;
-      correct = correct +1;
-      console.log("user responded yes to question two.")
-    }
-    else if (crushLowerCase == "no" || crushLowerCase == "n")
-    {
-      message += "<p class=\"incorrect\">You're totally wrong right now.</p>";
-      message = "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />"+message;
-      incorrect = incorrect +1;
-      console.log("user responded no to questions two.")
-    }
-    else {alert ("Yes or no answers only, please.");
-    }
-    document.getElementById("TriviaResponses").innerHTML += "<br>"+message;
+      if (usersAnswer == "yes" || usersAnswer == "y")
+      {
+        message += correctMessage
+        correct = correct +1;
+        message = "<img src='http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />"+ message;
+      }
+      else if (usersAnswer == "no" || usersAnswer == "n")
+      {
+        message += incorrectMessage
+        incorrect = incorrect +1;
+        message = "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />"+ message;
+      }
 
-  }
-
-//mona//
-  function Q3 (){
-    var trickQuestion = "Has Grandmother touched the Mona Lisa?"
-    var mona = prompt(trickQuestion, "yes/no");
-    var monaLowerCase = mona.toLowerCase()
-    message = "<p>" + trickQuestion +"</p>"
-    if (monaLowerCase == "yes" || monaLowerCase == "y")
-    {
-      message += "<p class=\"incorrect\">Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.</p>";
-      message = "<img src='http://i.imgur.com/Zzrpn3s.png' align='left' width='100' height='100' />"+message;
-      incorrect = incorrect +1;
-      console.log("user responded no to question three.")
+      document.getElementById("TriviaResponses").innerHTML = "<br>"+message
     }
-    else if (monaLowerCase == "no" || monaLowerCase == "n")
-    {
-      message += "<p class=\"correct\">You would think that. Classic " +userName + ". You're right, Smarty Pants.</p>";
-      message = "<img src= 'http://i.imgur.com/AkPCdGb.jpg' align='left' width='100' height='100' />"+message;
-      correct = correct + 1;
-      console.log("user responded no to question three.")
-    }
-    else {alert ("Yes or no answers only, please.")
-    }
-    document.getElementById("TriviaResponses").innerHTML += "<br>"+message
-  }
 
 //age//
   function Q4 (){
@@ -128,4 +67,33 @@
     message+="<p class =\"incorrect\">You missed " + incorrect + " of 4 gold stars.</p>"
     document.getElementById("TriviaResponses").innerHTML += "<br>" +message
 
+  }
+
+  function triviaGame() {
+    name();
+    var questions = new Array(
+      "First things first. Is Grandmother's very favorite thing her green dress?",
+      "Is Grandmother's #1 celebrity crush Jason Hardy?",
+      "Did Grandmother get close to touching the Mona Lisa?",
+  )
+    console.log (questions)
+
+    var correctMessage = new Array(
+      "<p class=\"correct\">Gold star for you, "  +userName + "! Green dress is correct!</p>",
+      "<p class=\"correct\">Gold Star for you " +userName + "! Jason is a celebrity in Grandmother's eyes. *Aww*</p>",
+      "<p class=\"correct\">You would think that. Classic " +userName + ". You're right, Smarty Pants.</p>",
+  )
+
+   var incorrectMessage = new Array(
+     "<p class=\"incorrect\">Negative, ghost rider. Green dress is number one. No gold star for " +userName + ". Bummer!</p>",
+     "<p class=\"incorrect\">You're totally wrong right now.</p>",
+     "<p class=\"incorrect\">Trick question! She didn't touch the Mona Lisa, but boy, she sure got close! No gold star this time.</p>"
+
+   )
+    for (var i = 0; i< questions.length; i++) {
+      askQuestion (questions[i], correctMessage[i], incorrectMessage[i])
+      console.log(i)
+    }
+    Q4();
+    finalScore();
   }
